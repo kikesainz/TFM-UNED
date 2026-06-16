@@ -142,27 +142,31 @@ def parse_meta(meta_text: str) -> Dict[str, str]:
     return meta
 
 
+import re
+from typing import List, Dict
+
+# Opciones MyST tipo ":id: valor"
+MYST_OPT_RE = re.compile(r"^:([A-Za-z0-9_-]+):\s*(.*)$")
+
 def extract_qseeds(text: str) -> List[QSeed]:
     """
-    Busca bloques:
-    ```qseed
-    id: ...
-    type: ...
-    n: ...
-    difficulty: ...
-    objective: ...
-    ---
-    texto semilla...
-    ```
+    Detecta semillas qseed en dos formatos:
+    A) Fenced code blocks: ```qseed ... ```
+    B) MyST admonitions:  :::{admonition} ... :class: qseed ... :::
+
+    Devuelve una lista de QSeed en el orden en el que aparecen en el documento.
     """
     seeds: List[QSeed] = []
     lines = text.replace("\r\n", "\n").split("\n")
 
     i = 0
     while i < len(lines):
-        line = lines[i].strip().lower()
+        line = lines[i].strip()
 
-        if line.startswith("```qseed"):
+        # ------------------------------------------------------------
+        # A) Formato clásico: ```qseed
+        # ------------------------------------------------------------
+        if line.lower().startswith("```qseed"):
             i += 1
             meta_lines: List[str] = []
             body_lines: List[str] = []
@@ -172,7 +176,7 @@ def extract_qseeds(text: str) -> List[QSeed]:
                 cur_raw = lines[i]
                 cur = cur_raw.strip()
 
-                if cur.startswith("```"):  # cierre del bloque
+                if cur.startswith("```"):  # cierre
                     break
 
                 if not in_body and (cur == "---" or cur == "..." or DASH_LINE_RE.match(cur)):
@@ -184,7 +188,6 @@ def extract_qseeds(text: str) -> List[QSeed]:
 
             meta_text = "\n".join(meta_lines).strip()
             body_text = "\n".join(body_lines).strip()
-
             if not meta_text or not body_text:
                 raise ValueError("Bloque qseed incompleto: faltan metadatos o cuerpo")
 
@@ -206,13 +209,85 @@ def extract_qseeds(text: str) -> List[QSeed]:
             objective = meta.get("objective", "")
 
             seeds.append(QSeed(
-                sid=sid,
-                qtype=qtype,
-                n=n,
-                difficulty=difficulty,
-                objective=objective,
-                body=body_text
+                sid=sid, qtype=qtype, n=n, difficulty=difficulty,
+                objective=objective, body=body_text
             ))
+
+            # saltar el cierre ``` (si existe)
+            while i < len(lines) and not lines[i].strip().startswith("```"):
+                i += 1
+            i += 1
+            continue
+
+        # ------------------------------------------------------------
+        # B) Formato MyST: :::{admonition} ... :class: qseed ... :::
+        # ------------------------------------------------------------
+        if line.startswith(":::{admonition}") or line.startswith("::: {admonition}"):
+            # leer todo el bloque hasta el cierre ':::'
+            i += 1
+            block_lines: List[str] = []
+            while i < len(lines) and lines[i].strip() != ":::":  # cierre
+                block_lines.append(lines[i])
+                i += 1
+
+            # parseo de opciones al inicio hasta línea en blanco
+            meta: Dict[str, str] = {}
+            body_lines: List[str] = []
+            in_body = False
+
+            for raw in block_lines:
+                s = raw.strip()
+                if not in_body:
+                    if s == "":
+                        in_body = True
+                        continue
+                    m = MYST_OPT_RE.match(s)
+                    if m:
+                        meta[m.group(1).lower()] = m.group(2).strip()
+                        continue
+                    # si aparece texto antes de línea en blanco, lo tratamos como cuerpo
+                    in_body = True
+
+                if in_body:
+                    body_lines.append(raw)
+
+            # cerrar bloque (saltamos la línea ':::')
+            if i < len(lines) and lines[i].strip() == ":::":  # consume cierre
+                i += 1
+
+            # si NO es qseed, ignoramos el admonition y seguimos
+            cls = meta.get("class", "")
+            if "qseed" not in cls.split():
+                continue
+
+            body_text = "\n".join(body_lines).strip()
+            if not body_text:
+                raise ValueError("Admonition qseed incompleto: falta cuerpo")
+
+            sid = meta.get("id")
+            if not sid:
+                raise ValueError("Admonition qseed sin ':id:'")
+
+            qtype = meta.get("type", "mcq").lower()
+            if qtype not in ("mcq", "tf"):
+                raise ValueError(f"Tipo no soportado en {sid}: {qtype}")
+
+            try:
+                n = int(meta.get("n", "1"))
+            except ValueError:
+                n = 1
+
+            difficulty = meta.get("difficulty", "media").lower()
+            if difficulty not in ("baja", "media", "alta"):
+                difficulty = "media"
+
+            objective = meta.get("objective", "")
+
+            seeds.append(QSeed(
+                sid=sid, qtype=qtype, n=n, difficulty=difficulty,
+                objective=objective, body=body_text
+            ))
+            continue
 
         i += 1
 
@@ -735,7 +810,8 @@ def main(input_path: str, out_gift: str, model: str, read_all_cells: bool = Fals
     text = load_text_from_file(input_path, read_all_cells=read_all_cells)
 
     if debug:
-        print("DEBUG: contiene ```qseed ? ", "```qseed" in text)
+        print("DEBUG: contiene qseed (fence o MyST)?",
+              ("```qseed" in text.lower()) or (":class: qseed" in text.lower()))
 
     seeds = extract_qseeds(text)
 
