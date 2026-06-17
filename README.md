@@ -1,5 +1,7 @@
 # Generación semiautomática de bancos de preguntas desde apuntes en Jupyter/MyST
 
+Este repositorio contiene el prototipo desarrollado como parte del Trabajo de Fin de Máster del Máster Universitario en Ingeniería de las Tecnologías Educativas de la UNED. El TFM se titula **“Generación semiautomática de bancos de preguntas desde apuntes en Jupyter/MyST con LLMs y control de calidad”** y tiene como objetivo explorar un flujo de trabajo para generar bancos de preguntas a partir de materiales docentes en Markdown/MyST o cuadernos Jupyter (`.ipynb`).
+
 Este repositorio contiene un prototipo en Python para generar de forma semiautomática un banco de preguntas a partir de materiales docentes escritos en Markdown/MyST o en cuadernos Jupyter (`.ipynb`).
 
 El sistema permite marcar fragmentos del material mediante semillas `qseed`, generar preguntas con ayuda de un modelo de lenguaje, validar la estructura de los ítems, comprobar que cada pregunta contiene una evidencia literal presente en la fuente y exportar el resultado final en formato Moodle GIFT.
@@ -130,7 +132,7 @@ El programa utiliza la API de OpenAI para generar las preguntas. Para ello es ne
 Crea un fichero llamado `.env` en la raíz del proyecto:
 
 ```env
-OPENAI_API_KEY=tu_clave_de_openai_aqui
+OPENAI_API_KEY=pon_aquí_tu_clave_sk-XXX
 ```
 
 Ejemplo:
@@ -139,21 +141,9 @@ Ejemplo:
 OPENAI_API_KEY=sk-proj-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
-> **Importante:** no subas nunca tu fichero `.env` al repositorio. La clave de API es privada.
 
-Añade esta línea al fichero `.gitignore`:
-
-```gitignore
-.env
 ```
 
-También se recomienda incluir en el repositorio un fichero `.env.example` con el siguiente contenido:
-
-```env
-OPENAI_API_KEY=pon_aqui_tu_clave
-```
-
-De esta forma, otros usuarios sabrán qué variable deben configurar sin exponer ninguna clave real.
 
 ## Formato de las semillas qseed
 
@@ -186,22 +176,11 @@ Campos principales:
 
 La ejecución se realiza desde consola mediante `main.py`.
 
-Ejemplo sobre un cuaderno Jupyter:
-
-```bash
-python main.py --input ejemplos/apuntes_dns_2asir_con_30_qseeds.ipynb --output outputs/banco.gift --report outputs/banco.report.json
-```
-
-Ejemplo sobre un fichero Markdown/MyST:
-
-```bash
-python main.py --input ejemplos/apuntes_dns_2asir_myst.md --output outputs/banco.gift --report outputs/banco.report.json
-```
 
 Ejemplo indicando modelo:
 
 ```bash
-python main.py --input ejemplos/apuntes_dns_2asir_con_30_qseeds.ipynb --output outputs/banco.gift --report outputs/banco.report.json --model gpt-4o-mini
+python main.py --input apuntes/apuntes_dns_2asir_con_30_qseeds.ipynb  outputs/banco.gift  gpt-4o-mini
 ```
 
 Parámetros habituales:
@@ -272,44 +251,16 @@ El sistema ayuda a generar y filtrar preguntas, pero la decisión final sobre su
 ├── requirements.txt
 ├── .gitignore
 ├── .env.example
-├── ejemplos/
+├── apuntes/
 │   ├── apuntes_dns_2asir_con_30_qseeds.ipynb
 │   └── apuntes_dns_2asir_myst.md
 ├── outputs/
 │   ├── banco.gift
 │   └── banco.report.json
-└── docs/
-    └── uso.md
+
 ```
 
-## Ejemplo de `.gitignore`
 
-```gitignore
-# Entornos virtuales
-.venv/
-venv/
-env/
-
-# Variables de entorno
-.env
-
-# Caché de Python
-__pycache__/
-*.pyc
-*.pyo
-
-# Notebooks
-.ipynb_checkpoints/
-
-# Salidas generadas
-outputs/
-*.gift
-*.report.json
-
-# Ficheros del sistema
-.DS_Store
-Thumbs.db
-```
 
 ## Buenas prácticas de seguridad
 
