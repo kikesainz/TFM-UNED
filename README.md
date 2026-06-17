@@ -2,8 +2,6 @@
 
 Este repositorio contiene el prototipo desarrollado como parte del Trabajo de Fin de Máster del Máster Universitario en Ingeniería de las Tecnologías Educativas de la UNED. El TFM se titula **“Generación semiautomática de bancos de preguntas desde apuntes en Jupyter/MyST con LLMs y control de calidad”** y tiene como objetivo explorar un flujo de trabajo para generar bancos de preguntas a partir de materiales docentes en Markdown/MyST o cuadernos Jupyter (`.ipynb`).
 
-Este repositorio contiene un prototipo en Python para generar de forma semiautomática un banco de preguntas a partir de materiales docentes escritos en Markdown/MyST o en cuadernos Jupyter (`.ipynb`).
-
 El sistema permite marcar fragmentos del material mediante semillas `qseed`, generar preguntas con ayuda de un modelo de lenguaje, validar la estructura de los ítems, comprobar que cada pregunta contiene una evidencia literal presente en la fuente y exportar el resultado final en formato Moodle GIFT.
 
 ## Índice
@@ -289,4 +287,4 @@ Estas funcionalidades se consideran posibles líneas de trabajo futuro.
 
 ## Licencia
 
-Indicar aquí la licencia del proyecto, por ejemplo MIT, Apache 2.0 o la que se considere adecuada.
+Apache 2.0.
