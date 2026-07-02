@@ -1,0 +1,1575 @@
+{
+  "run": {
+    "timestamp_utc": "2026-07-02T09:12:01.829936+00:00",
+    "input_path": ".\\apuntes\\apuntes_dns_2asir_con_30_qseeds.ipynb",
+    "output_gift": "outputs/banco.gift",
+    "model": "gpt-4o-mini",
+    "seeds_found": 30,
+    "questions_exported": 60
+  },
+  "thresholds": {
+    "jaccard_distractor_correct_max": 0.75,
+    "jaccard_distractor_stem_min": 0.1,
+    "choice_length_ratio_max": 2.5,
+    "rationale_min_chars": 12,
+    "rationales_expected": 3,
+    "evidence_retry_max_attempts": 3
+  },
+  "questions": [
+    {
+      "question_id": "dns-what-is-q1",
+      "seed_id": "dns-what-is",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "funcion",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Almacenar direcciones IP'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Permitir navegación en redes sociales'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Cifrar información en la red'"
+      ],
+      "jaccard_distractor_correct": [
+        0.2,
+        0.0,
+        0.0
+      ],
+      "jaccard_distractor_stem": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "choice_len_ratio": 1.8333333333333333,
+      "rationale_lengths": [
+        58,
+        56,
+        52
+      ]
+    },
+    {
+      "question_id": "dns-what-is-q2",
+      "seed_id": "dns-what-is",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "definicion",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Convierte direcciones IP a nombres legibles'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Acelera la conexión a internet'"
+      ],
+      "jaccard_distractor_correct": [
+        0.125,
+        0.0,
+        0.0
+      ],
+      "jaccard_distractor_stem": [
+        0.0,
+        0.14285714285714285,
+        0.0
+      ],
+      "choice_len_ratio": 1.6333333333333333,
+      "rationale_lengths": [
+        51,
+        43,
+        41
+      ]
+    },
+    {
+      "question_id": "dns-hosts-file-q1",
+      "seed_id": "dns-hosts-file",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "causa_efecto",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Es más rápido que DNS'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'No requiere mantenimiento'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Asocia direcciones IPv6'"
+      ],
+      "jaccard_distractor_correct": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jaccard_distractor_stem": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "choice_len_ratio": 1.7857142857142858,
+      "rationale_lengths": [
+        57,
+        73,
+        54
+      ]
+    },
+    {
+      "question_id": "dns-hosts-file-q2",
+      "seed_id": "dns-hosts-file",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "definicion",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Asignar usuarios a nombres de servidor'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Configurar parámetros de red'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Controlar el tráfico de internet'"
+      ],
+      "jaccard_distractor_correct": [
+        0.16666666666666666,
+        0.0,
+        0.0
+      ],
+      "jaccard_distractor_stem": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "choice_len_ratio": 1.3571428571428572,
+      "rationale_lengths": [
+        50,
+        44,
+        48
+      ]
+    },
+    {
+      "question_id": "dns-hierarchy-q1",
+      "seed_id": "dns-hierarchy",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "definicion",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'En una sola estructura lineal sin divisiones.'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'A través de múltiples redes independientes.'"
+      ],
+      "jaccard_distractor_correct": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jaccard_distractor_stem": [
+        0.0,
+        0.0,
+        0.125
+      ],
+      "choice_len_ratio": 1.236842105263158,
+      "rationale_lengths": [
+        50,
+        37,
+        51
+      ]
+    },
+    {
+      "question_id": "dns-hierarchy-q2",
+      "seed_id": "dns-hierarchy",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "funcion",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.08): 'Son nombres únicos que no tienen relación con la raíz.'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Solo representan ubicaciones dentro de un país.'"
+      ],
+      "jaccard_distractor_correct": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jaccard_distractor_stem": [
+        0.07692307692307693,
+        0.0,
+        0.1
+      ],
+      "choice_len_ratio": 1.2857142857142858,
+      "rationale_lengths": [
+        56,
+        52,
+        63
+      ]
+    },
+    {
+      "question_id": "dns-components-q1",
+      "seed_id": "dns-components",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "funcion",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'servidor autoritativo'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'resolvedor recursivo'",
+        "WARNING: longitudes de opciones muy dispares (ratio>2.5): [13, 21, 20, 8]"
+      ],
+      "jaccard_distractor_correct": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jaccard_distractor_stem": [
+        0.0,
+        0.0,
+        0.125
+      ],
+      "choice_len_ratio": 2.625,
+      "rationale_lengths": [
+        104,
+        87,
+        73
+      ]
+    },
+    {
+      "question_id": "dns-components-q2",
+      "seed_id": "dns-components",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "proceso_paso",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'proporciona la respuesta final'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'almacena la información'"
+      ],
+      "jaccard_distractor_correct": [
+        0.0,
+        0.25,
+        0.0
+      ],
+      "jaccard_distractor_stem": [
+        0.0,
+        0.125,
+        0.0
+      ],
+      "choice_len_ratio": 1.7777777777777777,
+      "rationale_lengths": [
+        98,
+        88,
+        83
+      ]
+    },
+    {
+      "question_id": "dns-recursive-iterative-q1",
+      "seed_id": "dns-recursive-iterative",
+      "type": "tf",
+      "difficulty": "media",
+      "answer_type": "definicion",
+      "warnings": [],
+      "jaccard_distractor_correct": [],
+      "jaccard_distractor_stem": [],
+      "choice_len_ratio": null,
+      "rationale_lengths": []
+    },
+    {
+      "question_id": "dns-recursive-iterative-q2",
+      "seed_id": "dns-recursive-iterative",
+      "type": "tf",
+      "difficulty": "media",
+      "answer_type": "otro",
+      "warnings": [],
+      "jaccard_distractor_correct": [],
+      "jaccard_distractor_stem": [],
+      "choice_len_ratio": null,
+      "rationale_lengths": []
+    },
+    {
+      "question_id": "dns-cache-ttl-q1",
+      "seed_id": "dns-cache-ttl",
+      "type": "tf",
+      "difficulty": "media",
+      "answer_type": "definicion",
+      "warnings": [],
+      "jaccard_distractor_correct": [],
+      "jaccard_distractor_stem": [],
+      "choice_len_ratio": null,
+      "rationale_lengths": []
+    },
+    {
+      "question_id": "dns-cache-ttl-q2",
+      "seed_id": "dns-cache-ttl",
+      "type": "tf",
+      "difficulty": "media",
+      "answer_type": "funcion",
+      "warnings": [],
+      "jaccard_distractor_correct": [],
+      "jaccard_distractor_stem": [],
+      "choice_len_ratio": null,
+      "rationale_lengths": []
+    },
+    {
+      "question_id": "dns-zones-q1",
+      "seed_id": "dns-zones",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "definicion",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Un método para crear copias de seguridad de dominios.'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'El límite físico en el que un servidor opera.'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Un protocolo de comunicación de red.'"
+      ],
+      "jaccard_distractor_correct": [
+        0.0,
+        0.1111111111111111,
+        0.0
+      ],
+      "jaccard_distractor_stem": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "choice_len_ratio": 2.0833333333333335,
+      "rationale_lengths": [
+        64,
+        66,
+        40
+      ]
+    },
+    {
+      "question_id": "dns-zones-q2",
+      "seed_id": "dns-zones",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "clasificacion",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Autoritativa y no autoritativa'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Estática y dinámica'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Debida a transferencia o redistribución'"
+      ],
+      "jaccard_distractor_correct": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jaccard_distractor_stem": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "choice_len_ratio": 2.0526315789473686,
+      "rationale_lengths": [
+        76,
+        54,
+        60
+      ]
+    },
+    {
+      "question_id": "dns-records-overview-q1",
+      "seed_id": "dns-records-overview",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "definicion",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'CNAME'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'NS'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'TXT'"
+      ],
+      "jaccard_distractor_correct": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jaccard_distractor_stem": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "choice_len_ratio": 2.5,
+      "rationale_lengths": [
+        44,
+        51,
+        42
+      ]
+    },
+    {
+      "question_id": "dns-records-overview-q2",
+      "seed_id": "dns-records-overview",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "definicion",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'A'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'MX'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'PTR'",
+        "WARNING: longitudes de opciones muy dispares (ratio>2.5): [1, 2, 5, 3]"
+      ],
+      "jaccard_distractor_correct": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jaccard_distractor_stem": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "choice_len_ratio": 5.0,
+      "rationale_lengths": [
+        45,
+        48,
+        50
+      ]
+    },
+    {
+      "question_id": "dns-soa-record-q1",
+      "seed_id": "dns-soa-record",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "definicion",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Dirección IP del servidor de nombres.'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'La duración del TTL en segundos.'"
+      ],
+      "jaccard_distractor_correct": [
+        0.1111111111111111,
+        0.1111111111111111,
+        0.0
+      ],
+      "jaccard_distractor_stem": [
+        0.0,
+        0.125,
+        0.0
+      ],
+      "choice_len_ratio": 2.21875,
+      "rationale_lengths": [
+        70,
+        57,
+        71
+      ]
+    },
+    {
+      "question_id": "dns-soa-record-q2",
+      "seed_id": "dns-soa-record",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "clasificacion",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'TTL de zona'"
+      ],
+      "jaccard_distractor_correct": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jaccard_distractor_stem": [
+        0.0,
+        0.2,
+        0.2
+      ],
+      "choice_len_ratio": 1.5,
+      "rationale_lengths": [
+        61,
+        57,
+        74
+      ]
+    },
+    {
+      "question_id": "dns-forward-reverse-q1",
+      "seed_id": "dns-forward-reverse",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "definicion",
+      "warnings": [],
+      "jaccard_distractor_correct": [
+        0.3333333333333333,
+        0.5,
+        0.3333333333333333
+      ],
+      "jaccard_distractor_stem": [
+        0.1,
+        0.1111111111111111,
+        0.1
+      ],
+      "choice_len_ratio": 1.3333333333333333,
+      "rationale_lengths": [
+        49,
+        66,
+        46
+      ]
+    },
+    {
+      "question_id": "dns-forward-reverse-q2",
+      "seed_id": "dns-forward-reverse",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "funcion",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Registrar nombres de dominio'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Almacenar datos de configuración'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Filtrar tráfico de red'"
+      ],
+      "jaccard_distractor_correct": [
+        0.2,
+        0.0,
+        0.0
+      ],
+      "jaccard_distractor_stem": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "choice_len_ratio": 1.5,
+      "rationale_lengths": [
+        84,
+        73,
+        67
+      ]
+    },
+    {
+      "question_id": "dns-forwarders-q1",
+      "seed_id": "dns-forwarders",
+      "type": "tf",
+      "difficulty": "media",
+      "answer_type": "definicion",
+      "warnings": [],
+      "jaccard_distractor_correct": [],
+      "jaccard_distractor_stem": [],
+      "choice_len_ratio": null,
+      "rationale_lengths": []
+    },
+    {
+      "question_id": "dns-forwarders-q2",
+      "seed_id": "dns-forwarders",
+      "type": "tf",
+      "difficulty": "media",
+      "answer_type": "funcion",
+      "warnings": [],
+      "jaccard_distractor_correct": [],
+      "jaccard_distractor_stem": [],
+      "choice_len_ratio": null,
+      "rationale_lengths": []
+    },
+    {
+      "question_id": "dns-zone-transfers-q1",
+      "seed_id": "dns-zone-transfers",
+      "type": "tf",
+      "difficulty": "media",
+      "answer_type": "definicion",
+      "warnings": [],
+      "jaccard_distractor_correct": [],
+      "jaccard_distractor_stem": [],
+      "choice_len_ratio": null,
+      "rationale_lengths": []
+    },
+    {
+      "question_id": "dns-zone-transfers-q2",
+      "seed_id": "dns-zone-transfers",
+      "type": "tf",
+      "difficulty": "media",
+      "answer_type": "definicion",
+      "warnings": [],
+      "jaccard_distractor_correct": [],
+      "jaccard_distractor_stem": [],
+      "choice_len_ratio": null,
+      "rationale_lengths": []
+    },
+    {
+      "question_id": "dns-basic-security-q1",
+      "seed_id": "dns-basic-security",
+      "type": "tf",
+      "difficulty": "media",
+      "answer_type": "definicion",
+      "warnings": [],
+      "jaccard_distractor_correct": [],
+      "jaccard_distractor_stem": [],
+      "choice_len_ratio": null,
+      "rationale_lengths": []
+    },
+    {
+      "question_id": "dns-basic-security-q2",
+      "seed_id": "dns-basic-security",
+      "type": "tf",
+      "difficulty": "media",
+      "answer_type": "funcion",
+      "warnings": [],
+      "jaccard_distractor_correct": [],
+      "jaccard_distractor_stem": [],
+      "choice_len_ratio": null,
+      "rationale_lengths": []
+    },
+    {
+      "question_id": "bind-install-q1",
+      "seed_id": "bind-install",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "definicion",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'dnsmasq'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Apache'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'MySQL'"
+      ],
+      "jaccard_distractor_correct": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jaccard_distractor_stem": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "choice_len_ratio": 2.2,
+      "rationale_lengths": [
+        37,
+        46,
+        49
+      ]
+    },
+    {
+      "question_id": "bind-install-q2",
+      "seed_id": "bind-install",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "clasificacion",
+      "warnings": [],
+      "jaccard_distractor_correct": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "jaccard_distractor_stem": [
+        0.14285714285714285,
+        0.14285714285714285,
+        0.14285714285714285
+      ],
+      "choice_len_ratio": 1.3333333333333333,
+      "rationale_lengths": [
+        56,
+        42,
+        55
+      ]
+    },
+    {
+      "question_id": "bind-options-q1",
+      "seed_id": "bind-options",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "clasificacion",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'deny-transfer'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'block-recursor'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'set-timeout'"
+      ],
+      "jaccard_distractor_correct": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jaccard_distractor_stem": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "choice_len_ratio": 1.2727272727272727,
+      "rationale_lengths": [
+        107,
+        72,
+        70
+      ]
+    },
+    {
+      "question_id": "bind-options-q2",
+      "seed_id": "bind-options",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "definicion",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'reenviadores'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'listen-on'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'allow-transfer'"
+      ],
+      "jaccard_distractor_correct": [
+        0.0,
+        0.0,
+        0.3333333333333333
+      ],
+      "jaccard_distractor_stem": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "choice_len_ratio": 1.5555555555555556,
+      "rationale_lengths": [
+        74,
+        58,
+        74
+      ]
+    },
+    {
+      "question_id": "bind-declare-zones-q1",
+      "seed_id": "bind-declare-zones",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "funcion",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'dirección IP'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'servidor DNS secundario'"
+      ],
+      "jaccard_distractor_correct": [
+        0.25,
+        0.0,
+        0.0
+      ],
+      "jaccard_distractor_stem": [
+        0.14285714285714285,
+        0.0,
+        0.0
+      ],
+      "choice_len_ratio": 1.9166666666666667,
+      "rationale_lengths": [
+        80,
+        57,
+        60
+      ]
+    },
+    {
+      "question_id": "bind-declare-zones-q2",
+      "seed_id": "bind-declare-zones",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "clasificacion",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'en el registro DNS'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'en el servidor web'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'en el firewall'"
+      ],
+      "jaccard_distractor_correct": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jaccard_distractor_stem": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "choice_len_ratio": 1.3846153846153846,
+      "rationale_lengths": [
+        60,
+        33,
+        46
+      ]
+    },
+    {
+      "question_id": "bind-forward-zonefile-q1",
+      "seed_id": "bind-forward-zonefile",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "clasificacion",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'SOA, NS, TXT, MX'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'SOA, NS, A, SPF'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'SOA, MX, A, CNAME'"
+      ],
+      "jaccard_distractor_correct": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "jaccard_distractor_stem": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "choice_len_ratio": 1.2142857142857142,
+      "rationale_lengths": [
+        44,
+        57,
+        43
+      ]
+    },
+    {
+      "question_id": "bind-forward-zonefile-q2",
+      "seed_id": "bind-forward-zonefile",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "funcion",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Establece el nombre del dominio secundario.'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Especifica la dirección IP de un servidor web.'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Controla el tráfico de correo del dominio.'"
+      ],
+      "jaccard_distractor_correct": [
+        0.0,
+        0.14285714285714285,
+        0.0
+      ],
+      "jaccard_distractor_stem": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "choice_len_ratio": 1.1794871794871795,
+      "rationale_lengths": [
+        59,
+        56,
+        71
+      ]
+    },
+    {
+      "question_id": "bind-reverse-zonefile-q1",
+      "seed_id": "bind-reverse-zonefile",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "definicion",
+      "warnings": [
+        "WARNING: distractor muy parecido a la correcta (sim=1.00): 'arpa.in-addr'",
+        "WARNING: distractor muy parecido a la correcta (sim=1.00): 'in.addr.arpa'",
+        "WARNING: distractor muy parecido a la correcta (sim=1.00): 'addr.in-arpa'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'arpa.in-addr'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'in.addr.arpa'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'addr.in-arpa'"
+      ],
+      "jaccard_distractor_correct": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "jaccard_distractor_stem": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "choice_len_ratio": 1.0,
+      "rationale_lengths": [
+        60,
+        46,
+        58
+      ]
+    },
+    {
+      "question_id": "bind-reverse-zonefile-q2",
+      "seed_id": "bind-reverse-zonefile",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "funcion",
+      "warnings": [],
+      "jaccard_distractor_correct": [
+        0.5,
+        0.5,
+        0.3333333333333333
+      ],
+      "jaccard_distractor_stem": [
+        0.16666666666666666,
+        0.16666666666666666,
+        0.14285714285714285
+      ],
+      "choice_len_ratio": 1.3636363636363635,
+      "rationale_lengths": [
+        69,
+        51,
+        51
+      ]
+    },
+    {
+      "question_id": "bind-checkconfig-q1",
+      "seed_id": "bind-checkconfig",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "funcion",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'bind-valid'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'zone-validator'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'check-config'"
+      ],
+      "jaccard_distractor_correct": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jaccard_distractor_stem": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "choice_len_ratio": 1.5,
+      "rationale_lengths": [
+        62,
+        73,
+        71
+      ]
+    },
+    {
+      "question_id": "bind-checkconfig-q2",
+      "seed_id": "bind-checkconfig",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "definicion",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Para validar la configuración de sistemas'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Para reiniciar el servicio de BIND9'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Para monitorizar el rendimiento de BIND9'"
+      ],
+      "jaccard_distractor_correct": [
+        0.16666666666666666,
+        0.16666666666666666,
+        0.16666666666666666
+      ],
+      "jaccard_distractor_stem": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "choice_len_ratio": 1.4285714285714286,
+      "rationale_lengths": [
+        69,
+        61,
+        72
+      ]
+    },
+    {
+      "question_id": "client-dns-config-q1",
+      "seed_id": "client-dns-config",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "clasificacion",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'En el archivo hosts'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'En la configuración de firewall'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'En el navegador web'"
+      ],
+      "jaccard_distractor_correct": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jaccard_distractor_stem": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "choice_len_ratio": 1.631578947368421,
+      "rationale_lengths": [
+        64,
+        58,
+        82
+      ]
+    },
+    {
+      "question_id": "client-dns-config-q2",
+      "seed_id": "client-dns-config",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "causa_efecto",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Las consultas son más rápidas'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Se mejora la seguridad del sistema'"
+      ],
+      "jaccard_distractor_correct": [
+        0.2,
+        0.0,
+        0.0
+      ],
+      "jaccard_distractor_stem": [
+        0.0,
+        0.1111111111111111,
+        0.0
+      ],
+      "choice_len_ratio": 1.1724137931034482,
+      "rationale_lengths": [
+        63,
+        59,
+        53
+      ]
+    },
+    {
+      "question_id": "dns-tools-dig-nslookup-q1",
+      "seed_id": "dns-tools-dig-nslookup",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "clasificacion",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'A, TXT, SRV, CNAME'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'MX, SRV, NS, SOA'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'A, AAAA, CNAME, PTR'"
+      ],
+      "jaccard_distractor_correct": [
+        0.0,
+        0.0,
+        0.3333333333333333
+      ],
+      "jaccard_distractor_stem": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "choice_len_ratio": 1.3571428571428572,
+      "rationale_lengths": [
+        60,
+        53,
+        55
+      ]
+    },
+    {
+      "question_id": "dns-tools-dig-nslookup-q2",
+      "seed_id": "dns-tools-dig-nslookup",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "funcion",
+      "warnings": [],
+      "jaccard_distractor_correct": [
+        0.0,
+        0.14285714285714285,
+        0.14285714285714285
+      ],
+      "jaccard_distractor_stem": [
+        0.1111111111111111,
+        0.1,
+        0.1
+      ],
+      "choice_len_ratio": 1.135135135135135,
+      "rationale_lengths": [
+        59,
+        52,
+        45
+      ]
+    },
+    {
+      "question_id": "bind-secondary-q1",
+      "seed_id": "bind-secondary",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "definicion",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.08): 'Servidor de base de datos'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.08): 'Servidor de almacenamiento'"
+      ],
+      "jaccard_distractor_correct": [
+        0.5,
+        0.2,
+        0.25
+      ],
+      "jaccard_distractor_stem": [
+        0.2727272727272727,
+        0.07692307692307693,
+        0.08333333333333333
+      ],
+      "choice_len_ratio": 1.2380952380952381,
+      "rationale_lengths": [
+        70,
+        69,
+        70
+      ]
+    },
+    {
+      "question_id": "bind-secondary-q2",
+      "seed_id": "bind-secondary",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "proceso_paso",
+      "warnings": [
+        "WARNING: distractor muy parecido a la correcta (sim=1.00): 'Se declara como master y se indica el slave'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Se declaran ambas como primarias'"
+      ],
+      "jaccard_distractor_correct": [
+        1.0,
+        0.14285714285714285,
+        0.125
+      ],
+      "jaccard_distractor_stem": [
+        0.1111111111111111,
+        0.14285714285714285,
+        0.0
+      ],
+      "choice_len_ratio": 1.34375,
+      "rationale_lengths": [
+        53,
+        52,
+        45
+      ]
+    },
+    {
+      "question_id": "win-dns-install-role-q1",
+      "seed_id": "win-dns-install-role",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "proceso_paso",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Panel de Control'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Símbolo del sistema'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Administración de tareas'"
+      ],
+      "jaccard_distractor_correct": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jaccard_distractor_stem": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "choice_len_ratio": 1.7142857142857142,
+      "rationale_lengths": [
+        72,
+        76,
+        81
+      ]
+    },
+    {
+      "question_id": "win-dns-install-role-q2",
+      "seed_id": "win-dns-install-role",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "definicion",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Antivirus y firewall'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Usuarios y grupos'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Recuperación del sistema'"
+      ],
+      "jaccard_distractor_correct": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jaccard_distractor_stem": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "choice_len_ratio": 1.411764705882353,
+      "rationale_lengths": [
+        58,
+        64,
+        78
+      ]
+    },
+    {
+      "question_id": "win-forward-zone-q1",
+      "seed_id": "win-forward-zone",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "funcion",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Protocolos de seguridad'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Configuraciones de firewall'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Grupos de usuarios'"
+      ],
+      "jaccard_distractor_correct": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jaccard_distractor_stem": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "choice_len_ratio": 1.5,
+      "rationale_lengths": [
+        56,
+        64,
+        60
+      ]
+    },
+    {
+      "question_id": "win-forward-zone-q2",
+      "seed_id": "win-forward-zone",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "definicion",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Monitorear el tráfico de red'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Gestionar permisos de usuario'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Configurar direcciones de correo'"
+      ],
+      "jaccard_distractor_correct": [
+        0.0,
+        0.0,
+        0.2
+      ],
+      "jaccard_distractor_stem": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "choice_len_ratio": 1.2142857142857142,
+      "rationale_lengths": [
+        54,
+        79,
+        67
+      ]
+    },
+    {
+      "question_id": "win-reverse-zone-q1",
+      "seed_id": "win-reverse-zone",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "funcion",
+      "warnings": [
+        "WARNING: distractor muy parecido a la correcta (sim=1.00): 'Nombre a IP'",
+        "WARNING: distractor muy parecido a la correcta (sim=1.00): 'Nombre a nombre'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Nombre a IP'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Nombre a nombre'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'IP a IP'"
+      ],
+      "jaccard_distractor_correct": [
+        1.0,
+        1.0,
+        0.0
+      ],
+      "jaccard_distractor_stem": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "choice_len_ratio": 2.142857142857143,
+      "rationale_lengths": [
+        53,
+        46,
+        34
+      ]
+    },
+    {
+      "question_id": "win-reverse-zone-q2",
+      "seed_id": "win-reverse-zone",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "clasificacion",
+      "warnings": [],
+      "jaccard_distractor_correct": [
+        0.5,
+        0.5,
+        0.3333333333333333
+      ],
+      "jaccard_distractor_stem": [
+        0.125,
+        0.125,
+        0.1111111111111111
+      ],
+      "choice_len_ratio": 1.3636363636363635,
+      "rationale_lengths": [
+        50,
+        45,
+        50
+      ]
+    },
+    {
+      "question_id": "win-queries-q1",
+      "seed_id": "win-queries",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "definicion",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'ping'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'tracert'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'ipconfig'"
+      ],
+      "jaccard_distractor_correct": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jaccard_distractor_stem": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "choice_len_ratio": 2.0,
+      "rationale_lengths": [
+        77,
+        85,
+        63
+      ]
+    },
+    {
+      "question_id": "win-queries-q2",
+      "seed_id": "win-queries",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "funcion",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'El registro de la conexión de red'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'La dirección IP local'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'El nombre del equipo'"
+      ],
+      "jaccard_distractor_correct": [
+        0.16666666666666666,
+        0.0,
+        0.0
+      ],
+      "jaccard_distractor_stem": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "choice_len_ratio": 1.85,
+      "rationale_lengths": [
+        61,
+        53,
+        61
+      ]
+    },
+    {
+      "question_id": "win-forwarders-q1",
+      "seed_id": "win-forwarders",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "funcion",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Solo resolver nombres en la zona local'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Aumentar la velocidad de respuesta del servidor'"
+      ],
+      "jaccard_distractor_correct": [
+        0.0,
+        0.2857142857142857,
+        0.0
+      ],
+      "jaccard_distractor_stem": [
+        0.0,
+        0.1,
+        0.0
+      ],
+      "choice_len_ratio": 1.3823529411764706,
+      "rationale_lengths": [
+        72,
+        74,
+        71
+      ]
+    },
+    {
+      "question_id": "win-forwarders-q2",
+      "seed_id": "win-forwarders",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "clasificacion",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'A la zona local'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'A servidores de caché locales'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.09): 'A otros servidores DNS internos'"
+      ],
+      "jaccard_distractor_correct": [
+        0.0,
+        0.0,
+        0.2
+      ],
+      "jaccard_distractor_stem": [
+        0.0,
+        0.0,
+        0.09090909090909091
+      ],
+      "choice_len_ratio": 2.066666666666667,
+      "rationale_lengths": [
+        56,
+        69,
+        47
+      ]
+    },
+    {
+      "question_id": "dns-diagnosis-method-q1",
+      "seed_id": "dns-diagnosis-method",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "funcion",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'ping'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'traceroute'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'netstat'",
+        "WARNING: longitudes de opciones muy dispares (ratio>2.5): [4, 12, 10, 7]"
+      ],
+      "jaccard_distractor_correct": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jaccard_distractor_stem": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "choice_len_ratio": 3.0,
+      "rationale_lengths": [
+        82,
+        105,
+        77
+      ]
+    },
+    {
+      "question_id": "dns-diagnosis-method-q2",
+      "seed_id": "dns-diagnosis-method",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "proceso_paso",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Solo la configuración del cliente'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Solo la respuesta del servidor'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'Conectividad únicamente'"
+      ],
+      "jaccard_distractor_correct": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jaccard_distractor_stem": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "choice_len_ratio": 1.736842105263158,
+      "rationale_lengths": [
+        97,
+        84,
+        77
+      ]
+    },
+    {
+      "question_id": "dns-common-errors-q1",
+      "seed_id": "dns-common-errors",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "clasificacion",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'registros correctos'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'zonas bien declaradas'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'permisos de ficheros correctos'"
+      ],
+      "jaccard_distractor_correct": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jaccard_distractor_stem": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "choice_len_ratio": 1.5789473684210527,
+      "rationale_lengths": [
+        53,
+        51,
+        65
+      ]
+    },
+    {
+      "question_id": "dns-common-errors-q2",
+      "seed_id": "dns-common-errors",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "funcion",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'conexión de red adecuada'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'actualización frecuente de registros'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'uso de puertos distintos'"
+      ],
+      "jaccard_distractor_correct": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jaccard_distractor_stem": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "choice_len_ratio": 1.5,
+      "rationale_lengths": [
+        56,
+        65,
+        64
+      ]
+    },
+    {
+      "question_id": "dns-essential-commands-q1",
+      "seed_id": "dns-essential-commands",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "funcion",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'nslookup'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'dig'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'host'",
+        "WARNING: longitudes de opciones muy dispares (ratio>2.5): [22, 8, 3, 4]"
+      ],
+      "jaccard_distractor_correct": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jaccard_distractor_stem": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "choice_len_ratio": 7.333333333333333,
+      "rationale_lengths": [
+        68,
+        71,
+        83
+      ]
+    },
+    {
+      "question_id": "dns-essential-commands-q2",
+      "seed_id": "dns-essential-commands",
+      "type": "mcq",
+      "difficulty": "media",
+      "answer_type": "definicion",
+      "warnings": [
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'journalctl'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'nslookup'",
+        "WARNING: distractor poco relacionado con el enunciado (sim=0.00): 'dig'",
+        "WARNING: longitudes de opciones muy dispares (ratio>2.5): [15, 10, 8, 3]"
+      ],
+      "jaccard_distractor_correct": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jaccard_distractor_stem": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "choice_len_ratio": 5.0,
+      "rationale_lengths": [
+        63,
+        73,
+        73
+      ]
+    }
+  ],
+  "rejections": [
+    {
+      "seed_id": "dns-hosts-file",
+      "message": "[dns-hosts-file] Intento 1 falló solo por evidence -> reintento. Detalles: dns-hosts-file-q1: Evidence no aparece literalmente en la fuente | dns-hosts-file-q2: Evidence no aparece literalmente en la fuente"
+    },
+    {
+      "seed_id": "dns-components",
+      "message": "[dns-components] Intento 1 falló solo por evidence -> reintento. Detalles: dns-components-q1: Evidence no aparece literalmente en la fuente | dns-components-q2: Evidence no aparece literalmente en la fuente"
+    },
+    {
+      "seed_id": "dns-cache-ttl",
+      "message": "[dns-cache-ttl] Intento 1 falló solo por evidence -> reintento. Detalles: dns-cache-ttl-q1: Evidence no aparece literalmente en la fuente | dns-cache-ttl-q2: Evidence no aparece literalmente en la fuente"
+    },
+    {
+      "seed_id": "dns-zones",
+      "message": "[dns-zones] Intento 1 falló solo por evidence -> reintento. Detalles: dns-zones-q1: Evidence no aparece literalmente en la fuente"
+    },
+    {
+      "seed_id": "dns-forward-reverse",
+      "message": "[dns-forward-reverse] Intento 1 falló solo por evidence -> reintento. Detalles: dns-forward-reverse-q1: Evidence no aparece literalmente en la fuente"
+    },
+    {
+      "seed_id": "dns-forwarders",
+      "message": "[dns-forwarders] Intento 1 falló solo por evidence -> reintento. Detalles: dns-forwarders-q1: Evidence no aparece literalmente en la fuente | dns-forwarders-q2: Evidence no aparece literalmente en la fuente"
+    },
+    {
+      "seed_id": "bind-declare-zones",
+      "message": "[bind-declare-zones] Intento 1 falló solo por evidence -> reintento. Detalles: bind-declare-zones-q1: Evidence no aparece literalmente en la fuente | bind-declare-zones-q2: Evidence no aparece literalmente en la fuente"
+    },
+    {
+      "seed_id": "client-dns-config",
+      "message": "[client-dns-config] Intento 1 falló solo por evidence -> reintento. Detalles: client-dns-config-q1: Evidence no aparece literalmente en la fuente | client-dns-config-q2: Evidence no aparece literalmente en la fuente"
+    },
+    {
+      "seed_id": "bind-secondary",
+      "message": "[bind-secondary] Intento 1 falló solo por evidence -> reintento. Detalles: bind-secondary-q2: Evidence no aparece literalmente en la fuente"
+    },
+    {
+      "seed_id": "win-dns-install-role",
+      "message": "[win-dns-install-role] Intento 1 falló solo por evidence -> reintento. Detalles: win-dns-install-role-q1: Evidence no aparece literalmente en la fuente"
+    },
+    {
+      "seed_id": "win-queries",
+      "message": "[win-queries] Intento 1 falló solo por evidence -> reintento. Detalles: win-queries-q1: Evidence no aparece literalmente en la fuente"
+    },
+    {
+      "seed_id": "win-forwarders",
+      "message": "[win-forwarders] Intento 1 falló solo por evidence -> reintento. Detalles: win-forwarders-q1: Evidence no aparece literalmente en la fuente"
+    },
+    {
+      "seed_id": "dns-common-errors",
+      "message": "[dns-common-errors] Intento 1 falló solo por evidence -> reintento. Detalles: dns-common-errors-q1: Evidence no aparece literalmente en la fuente | dns-common-errors-q2: Evidence no aparece literalmente en la fuente"
+    },
+    {
+      "seed_id": "dns-essential-commands",
+      "message": "[dns-essential-commands] Intento 1 falló solo por evidence -> reintento. Detalles: dns-essential-commands-q1: Evidence no aparece literalmente en la fuente | dns-essential-commands-q2: Evidence no aparece literalmente en la fuente"
+    }
+  ]
+}
